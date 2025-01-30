@@ -1,7 +1,6 @@
 import re
 from urllib.parse import urlparse
 import sys
-import streamlit as st
 import numpy as np
 import pickle
 from tld import get_tld  # Ensure you have the `tld` library installed
@@ -194,6 +193,8 @@ def get_prediction_from_url(url, model):
     return get_name(pred[0])
 
 def main():
+    import streamlit as st
+    
     # Get the path as a commandline argument
     path = sys.argv[1]
 
