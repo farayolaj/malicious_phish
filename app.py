@@ -1,3 +1,4 @@
+import sys
 import streamlit as st
 import numpy as np
 import pickle
@@ -59,7 +60,10 @@ def get_prediction_from_url(url, model):
 
     return get_name(pred[0])
 
-def main(path):
+def main():
+    # Get the path as a commandline argument
+    path = sys.argv[1]
+
     # Load the model
     model = load_model(path)
 
