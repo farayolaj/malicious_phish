@@ -220,3 +220,5 @@ def main():
                 st.error(f"Error processing the URL: {e}")
         else:
             st.warning("Please enter a URL to proceed.")
+
+main()
