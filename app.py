@@ -185,7 +185,7 @@ def get_name(i):
         return "MALWARE"
 
 def get_prediction_from_url(url, model):
-    features = get_features(url)
+    features = url_to_features(url)
     features = np.array(features).reshape((1, -1))
     print(features)
     pred = model.predict(features)
